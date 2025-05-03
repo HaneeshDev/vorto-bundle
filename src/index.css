@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Default shadcn variables */
+    --background: 156 59% 10%;
+    --foreground: 0 0% 100%;
+
+    --card: 156 59% 10%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 156 59% 10%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 142 90% 58%;
+    --primary-foreground: 156 59% 10%;
+
+    --secondary: 156 59% 20%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 156 59% 15%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 142 90% 58%;
+    --accent-foreground: 156 59% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 156 59% 20%;
+    --input: 156 59% 20%;
+    --ring: 142 90% 58%;
+
+    --radius: 0.5rem;
+
+    /* Sidebar variables */
+    --sidebar-background: 156 59% 10%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 142 90% 58%;
+    --sidebar-primary-foreground: 156 59% 10%;
+    --sidebar-accent: 156 59% 15%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 156 59% 15%;
+    --sidebar-ring: 142 90% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-zerovortex text-zerovortex-text font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-white;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+}
+
+
+@keyframes float-zvlab {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.floating-image {
+  animation: float-zvlab 3s ease-in-out infinite;
+}
+
+@layer components {
+  .zerovortex-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .zerovortex-card {
+    @apply bg-zerovortex-dark rounded-lg border border-zerovortex-light p-6;
+  }
+
+  .zerovortex-button {
+    @apply bg-zerovortex-neon text-zerovortex-dark hover:bg-opacity-90 font-medium py-2 px-4 rounded-md transition-all;
+  }
+
+  .zerovortex-button-outline {
+    @apply border border-zerovortex-neon text-zerovortex-neon hover:bg-zerovortex-neon hover:bg-opacity-10 font-medium py-2 px-4 rounded-md transition-all;
+  }
+
+  .zerovortex-input {
+    @apply bg-zerovortex-dark border border-zerovortex-light rounded-md px-4 py-2 text-white placeholder-zerovortex-muted focus:border-zerovortex-neon focus:outline-none focus:ring-1 focus:ring-zerovortex-neon;
+  }
+
+  .neon-glow {
+    @apply animate-pulse-glow;
+  }
+
+  .zerovortex-sidebar {
+    @apply bg-zerovortex-dark border-r border-zerovortex-light;
+  }
+
+  .zerovortex-sidebar-item {
+    @apply text-zerovortex-muted hover:text-zerovortex-neon px-4 py-2 rounded-md transition-colors;
+  }
+
+  .zerovortex-sidebar-item-active {
+    @apply bg-zerovortex-light text-zerovortex-neon;
+  }
+
+  .glowing-background {
+    @apply relative min-h-screen bg-[#001a0f];
+    background-image: 
+      radial-gradient(circle at 20% 35%, rgba(0, 255, 170, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 75% 44%, rgba(0, 255, 170, 0.1) 0%, transparent 40%);
+  }
+
+  .floating-particles {
+    @apply absolute inset-0 overflow-hidden pointer-events-none;
+  }
+
+  .particle {
+    @apply absolute w-1 h-1 rounded-full bg-green-400/30;
+    animation: float 8s infinite ease-in-out;
+  }
+
+  .grid-overlay {
+    @apply absolute inset-0 pointer-events-none;
+    background-image: linear-gradient(rgba(0, 255, 170, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 170, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-100px) translateX(100px);
+    opacity: 0.2;
+  }
+  75% {
+    opacity: 0.5;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
