@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 # Welcome to ZeroVortex
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
+=======
+# Welcome to your Zerovortex
+
+## Project info
+>>>>>>> 9c0b9759a8d8a48c7b802da5e0d71d888192d5b9
 
 **Use your preferred IDE**
 
@@ -49,4 +55,7 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9c0b9759a8d8a48c7b802da5e0d71d888192d5b9
